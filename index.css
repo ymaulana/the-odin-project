@@ -1,7 +1,7 @@
 :root {
   --primary-green: #596d48;
   --light-gray: #e5e7eb;
-  --error-red: #c13838;
+  --error-red: #c23838;
 }
 
 * {
@@ -56,12 +56,15 @@ span {
 .photo-credit {
   position: absolute;
   bottom: 1rem;
-  width: 100%;
+  width: calc(25% * 1.2);
   text-align: center;
   color: white;
   font-size: 0.8rem;
 }
 
+.photo-credit a {
+  color: white;
+}
 
 .form-section {
   font-family: sans-serif, system-ui;
@@ -126,7 +129,7 @@ input:focus {
 input[type='password']:focus {
   outline: none;
   border-color: var(--error-red);
-  box-shadow: 0 0 5px rgba(var(--error-red), 0.3);
+  box-shadow: 2px 2px 5px rgba(89, 109, 72, 0.3);
 }
 
 .separator {
@@ -144,6 +147,12 @@ button[type='submit'] {
   border: none;
   border-radius: 6px;
   box-shadow: 2px 2px 5px rgba(89, 109, 72, 0.3);
+  cursor: pointer;
+}
+
+button[type='submit']:hover {
+  background-color: var(--primary-green);
+  filter: brightness(80%);
 }
 
 .login-link a {
